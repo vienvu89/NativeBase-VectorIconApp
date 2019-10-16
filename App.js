@@ -18,7 +18,7 @@ const AppNavigator = createStackNavigator(
     initialRouteName: 'IconFamilyList',
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: '#f4511e',
+        backgroundColor: '#0091ea',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {

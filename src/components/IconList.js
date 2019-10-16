@@ -25,7 +25,6 @@ export default class IconList extends Component {
     const {params} = this.props.navigation.state;
     let iconFamily = params.iconFamily;
     this.iconFamily = iconFamily;
-    console.log(this.iconFamily);
   }
 
   getIconList(iconFamily) {
