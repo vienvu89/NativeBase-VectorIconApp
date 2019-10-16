@@ -1,20 +1,31 @@
-import React from 'react';
-import { StackNavigator } from 'react-navigation';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 import IconList from './src/components/IconList';
 import IconFamilyList from './src/components/IconFamilyList';
 
 console.disableYellowBox = true;
 
-export default StackNavigator({
-  IconFamilyList: {
-    screen: IconFamilyList
+const AppNavigator = createStackNavigator(
+  {
+    IconFamilyList: {
+      screen: IconFamilyList,
+    },
+    IconList: {
+      screen: IconList,
+    },
   },
-  IconList: {
-    screen: IconList
-  }
-}, {
-    navigationOptions: {
-      header: null
-    }
-  });
+  {
+    initialRouteName: 'IconFamilyList',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  },
+);
 
+export default createAppContainer(AppNavigator);
